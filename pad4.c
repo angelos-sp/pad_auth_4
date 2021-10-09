@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <time.h>
 
-#define n 1000000
+#define n 1000000 // matrix size n x n
 #define d 5 // non-zero elements per col
 #define b 5000 // block size = bxb
 
@@ -543,42 +543,3 @@ double elapsed_time(struct timespec start,struct timespec end){
         }
         return (double)temp.tv_sec +(double)((double)temp.tv_nsec/(double)1000000000);
 }
-
-
-/*
-void BMM(unsigned int* A_row, unsigned int* B_row, unsigned int* A_ptr, unsigned int* B_ptr, unsigned int* C_row, unsigned int* C_ptr, int block){
-    
-    unsigned int non_zero_B;
-    int col_non_zeros = 0;
-
-    int blocks_per_row = n / b;
-    int p = floor(block / blocks_per_row)*b; // block's starting row index
-    int q = (block % blocks_per_row)*b; // block's starting col index
-
-    //iterate cols of C
-    for (unsigned int j=q; j<(q+b); j++){
-
-        //iterate rows of C
-        for (unsigned int i=p; i<(p+b); i++){
-
-            //iterate through non-zeros of B's j-th col
-            for (unsigned int k=B_ptr[j]-1; k<B_ptr[j+1]-1; k++){
-                non_zero_B = B_row[k];
-                non_zero_B++;
-                //in A's non_zero_B-th col, iterate its non-zeros
-                for (unsigned int l=A_ptr[non_zero_B]-1; l<A_ptr[non_zero_B+1]-1; l++){
-                    if (A_row[l] == i){
-                        non_zeros_C++;
-                        col_non_zeros++;
-                        C_row[non_zeros_C-1] = i;
-                        break;
-                    }
-                    else if (A_row[l] > i)
-                        break;
-                }
-            }
-        }
-        C_ptr[j+1] = col_non_zeros + C_ptr[j];
-        col_non_zeros = 0;
-    }
-}*/

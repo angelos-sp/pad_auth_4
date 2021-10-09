@@ -14,3 +14,20 @@ A Boolean Matrix Multiplication implementation using two levels of parallelizati
 
 
 ## **2. Execution**
+
+In order to test the implementations locally on your machine, use the files located in the home directory. Follow the commands in the order given below:
+
+```
+make clean
+make all
+```
+
+To test pad4 and pad4_OMP, type:
+```
+./<filename>
+```
+
+To test the hybrid MPI/OMP implementation, type:
+```
+mpiexec -np <number_of_threads> ./pad4_MPI_OMP
+```

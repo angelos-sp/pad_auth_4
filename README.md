@@ -1,1 +1,3 @@
-# pad_auth_4
+# Parallel-Exercise4
+
+A Boolean Matrix Multiplication implementation using two levels of parallelization.

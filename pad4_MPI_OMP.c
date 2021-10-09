@@ -256,10 +256,7 @@ int main(){
 
 void block_A(unsigned int* A_ptr, unsigned int* A_row, int* A_block_IDs, int* A_locations, 
     int* A_nz_ptr, int* A_nz_blocks_per_row, int* A_nz_blocks_ptr, int *nz_count_ptr, int *ID_count_ptr){
-    //a non_zero_bits_before[blockID] <--- A_nz_ptr
-	//b locations = [i,j,i,j,i,j]
-	//c blockIDs (mi midenika blocks se seira)
-	//d ana_grammi_posa_mh_midenika_block_exw
+
     A_nz_ptr[0] = 0;
     
     int nz_count = 0;
@@ -310,10 +307,7 @@ void block_A(unsigned int* A_ptr, unsigned int* A_row, int* A_block_IDs, int* A_
 
 void block_B(unsigned int* B_ptr, unsigned int* B_row, int* B_block_IDs, int* B_locations, 
     int* B_nz_ptr, int* B_nz_blocks_per_col, int* B_nz_blocks_ptr, int *nz_count_ptr, int *ID_count_ptr){
-    //a non_zero_bits_before[blockID] <--- B_nz_ptr
-	//b locations = [i,j,i,j,i,j]
-	//c blockIDs (mi midenika blocks se seira)
-	//d ana_sthlh_posa_mh_midenika_block_exw
+
     B_nz_ptr[0] = 0;
 
     int nz_count = 0;

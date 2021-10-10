@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="600" height="257" src="https://i.imgur.com/7LkJXSC.png">
+</p>
+
 # Parallel-Exercise4
 
 A Boolean Matrix Multiplication implementation using two levels of parallelization.
